@@ -1,0 +1,459 @@
+body{
+    margin:0;
+    padding:0;
+    background: rgb(246,246,246);
+    header{
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        background: white;
+        .head-content{
+            margin: 0 auto;
+            width: 76%;
+            padding: 8px 0 10px;
+            text-align: center;
+            overflow: hidden;
+
+            i{
+                display: inline-block;
+                width: 242px;
+                height: 59px;
+                background: url("/img/91ud-logo.png");
+                background-size:242px 59px;
+                float: left;        
+            }
+            img{
+                float: left;
+                padding-left: 18px;        
+            }
+            .search{
+                padding-top: 15px;
+                float: right;   
+                display: inline-block;
+                input{
+                    float: left;
+                    width: 220px;
+                    height: 36px;
+                    outline: none;
+                    text-indent: 10px;
+                    border: 1px solid #49ad41;
+                    padding: 0;
+                    outline-color:white;
+                }
+                span{
+                    float: left;
+                    width: 70px;
+                    height: 38px;
+                    background: rgb(73,173,65);
+                    color: white;
+                    font-size: 14px;
+                    line-height: 38px;
+                }
+            }
+        }
+        nav{
+            background: #49ad41;
+            height: 40px;
+            ul{
+                display: block;  
+                margin: 0 auto;
+                padding: 0;
+                width: 76%;
+                text-align: center; 
+                li{
+                    display: inline; 
+                    margin: 0;
+                    float: left;
+                    padding: 12px 16px 12px 16px; 
+                    color: white; 
+                    &:hover,&:first-child{
+                        background: rgb(55,130,51);
+                    } 
+                }
+            }
+        }
+    }
+
+    #content{
+        margin: 0 auto;
+        width: 76%;
+        padding-top: 137px;
+
+        .broadcast{
+            z-index:8px;
+            position: absolute;
+            overflow: hidden;
+            cursor: pointer;
+            width: 720px;
+            height: 261px;
+            #bcframe{
+                position: absolute;z-index:9px;  
+                width: calc(722px * 5);/*---修改图片数量的话需要修改下面的动画参数*/
+                &:hover{
+                    animation-play-state:paused;
+                }
+                animation: ma 20s ease-out infinite alternate;
+            }
+            &:hover span{
+                display: inline-block;
+            }
+            @keyframes ma{
+                0%,20% {        margin-left: 0px;       }  
+                25%,40% {       margin-left: -720px;    }  
+                45%,60% {       margin-left: -1440px;    }  
+                65%,80% {       margin-left: -2160px;    }  
+                85%,100% {      margin-left: -2880px;   }  
+            }
+            img{
+                float: left;
+                width: 720px;
+                height: 261px;
+            }
+            span{
+                display: none;
+                position: absolute;
+                top:102px;
+                width: 40px;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                background: rgba(0,0,0,.3);
+                color: #ddd;
+                font-size: 30px;    
+                &:hover{
+                    background: rgba(0,0,0,.2);
+                }
+                &:first-of-type{
+                    left: 1px;
+                }
+                &:last-of-type{
+                    right: 1px;
+                }
+            }
+            nav{
+                position: absolute;
+                z-index: 12px;
+                width: 100%;
+                bottom: 8px;
+                ol{
+                    width: 100%;
+                    padding: 0;
+                    margin: 0 auto;
+                    text-align: center;
+                    li{
+                        display: inline-block;
+                        width: 4px;
+                        height: 6px;
+                        color: transparent;                        
+                        border:2px solid white;
+                        border-radius: 50%;
+                        display: inline-block;
+                        padding: 0 1px;
+                        font-size: 4px;
+                        margin-left: 3px;
+                        &:hover{
+                            background: white;
+                            animation-play-state: paused;
+                        }
+                        //并不管用
+                        #d1:hover #bcframe{animation: ma1 .5s ease-out forwards;-webkit-animation:ma1 .5s ease-out forwards;}  
+                        #d2:hover #bcframe{animation: ma2 .5s ease-out forwards;-webkit-animation:ma2 .5s ease-out forwards;}  
+                        #d3:hover #bcframe{animation: ma3 .5s ease-out forwards;-webkit-animation:ma3 .5s ease-out forwards;}  
+                        #d4:hover #bcframe{animation: ma4 .5s ease-out forwards;-webkit-animation:ma4 .5s ease-out forwards;}  
+                        #d5:hover #bcframe{animation: ma5 .5s ease-out forwards;-webkit-animation:ma5 .5s ease-out forwards;}  
+                        @keyframes ma1 {0%{margin-left:-2880px;}100%{margin-left:-0px;} }  
+                        @keyframes ma2 {0%{margin-left:-2880px;}100%{margin-left:-720px;} }  
+                        @keyframes ma3 {100%{margin-left:-1440px;}   }  
+                        @keyframes ma4 {100%{margin-left:-2160px;}   }  
+                        @keyframes ma5 {100%{margin-left:-2880px;}  }
+                        
+                    }   
+                }
+            }
+        }
+ 
+        .castmore{
+            float: right;
+            div{
+                &:last-of-type{
+                    margin-top: 15px;                
+                }
+            }
+        }
+
+        .hot{
+            margin-top: 261px;
+            span{
+                &:first-of-type{
+                    display: block;
+                    padding: 20px 0;
+                }
+                
+            }
+            div{
+                padding: 12px;
+                &:first-of-type{
+                    background: white;
+                }
+                
+                .hotitem{
+                    padding:10px 12px 10px 12px;
+                    &:not(:last-child){
+                        margin-right: 8px;
+                    }
+                    
+                    border: 1px solid white;
+                    &:hover{
+                        border: 1px solid rgb(220,220,220);
+                    }
+                    &:hover span{
+                        color: white;
+                        background: rgb(73,173,65);
+                    }
+                    width: 90px;
+                    overflow: hidden;
+                    display: inline-block;
+                    span{
+                        text-align: center;
+                        width: 80px;
+                        padding: 5px;
+                        margin: 5px 0 0 0;
+                        text-overflow:ellipsis;
+                        overflow:hidden; 
+                        white-space:nowrap; 
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .lastdiv{
+                padding: 0;
+                margin: 20px 0 0;
+                img{
+                    &:not(:last-child){
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+        .new{
+            margin-top: 0;
+        }
+        .good{
+            padding: 0 0 12px 0;
+            & > div{
+                background: white;
+                padding-bottom: 0;
+            }
+        }
+        .navdoor{
+            margin-top: 10px;
+            background: white;
+            padding: 10px;
+            ul{
+                &:nth-of-type(2){
+                    li{
+                        &:first-child{
+                            background: rgb(120,180,251);
+                        }
+                    }
+                }
+                &:nth-of-type(3){
+                    li{
+                        &:first-child{
+                            background: rgb(137,142,244);
+                        }
+                    }
+                }
+                padding: 0;
+                margin: 0;
+                &:not(:last-child){
+                    margin: 0 0 10px 0;
+                }                
+                li{
+                    &:first-child{
+                        padding: 5px 10px;
+                        background: rgb(237,127,87);
+                        font-size: 13px;
+                        color: white;
+                    }
+                    &:hover{
+                        color: white;
+                        background: rgb(73,173,65);
+                    }
+                    padding: 5px;
+                    margin-right: 5px;
+                    display: inline-block;
+                    font-size: 12px;
+                }
+            }
+        }
+        .castagain{
+            overflow: hidden;
+            margin-top: 10px;
+            & > div{
+                &:first-of-type{
+                    float: left;
+                    div{
+                        &:first-of-type{
+                            img{
+                                margin: 0 10px 6px 0;
+                            }
+                        }
+                        &:last-of-type{
+                            img{
+                                margin: 6px 10px 0 0;
+                            }
+                        }
+                    }
+                }
+                &:last-of-type{
+                    float:right; 
+                    padding: 10px;
+                    background: white;
+                    width: 247px;
+                    a{
+                        font-size: 14px;
+                        padding: 5.4px 5px;
+                        display: block;
+                        text-decoration: none;
+                        text-overflow:ellipsis;
+                        overflow:hidden; 
+                        white-space:nowrap; 
+                        &:link{color: black;}
+                        &:visited{color: black;}
+                        &:hover{
+                            color: rgb(73,173,65);
+                            text-decoration: underline;
+                        }
+                        &:active{color: black;}
+                    }
+                }
+            }
+        }
+        .rellink{
+            span{
+                display: block;
+                padding: 20px 0;
+            }
+            ul{
+                padding: 20px;
+                margin: 0;
+                background: white;
+                li{
+                    padding: 5px;
+                    display: inline-block;
+                    font-size: 14px;
+                    a{
+                        text-decoration: none;
+                        &:link{color: black;}
+                        &:visited{color: black;}
+                        &:hover{
+                            text-decoration: underline;
+                            color: black;
+                        } 
+                        &:active{color: black;}
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .fixdiag{
+        position: fixed;
+        right: 92px;
+        top: 400px;
+        #qrcodeshow{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: -220px;
+            img{
+                float: left;
+            }
+            i{
+                float: left;
+                display: inline-block;
+                width:0;
+                height:0;
+                position: absolute;
+                top: 80px;
+                border-top:10px transparent dashed;
+                border-right:10px transparent dashed;
+                border-bottom:10px transparent dashed;
+                border-left:10px white solid;
+                overflow:hidden;
+            }
+        }
+        span{
+            font-size: 14px;
+            padding:10px;
+            text-align: center;
+            color: transparent;
+            display: block;
+            width: 35px;
+            height: 35px;
+            line-height: 17.5px;
+            margin-bottom: 8px;
+            word-wrap:break-word; 
+            word-break:normal; 
+            &:hover{
+                color: white;
+            }
+            &:first-of-type{
+                background: url("/img/edit.png");
+                &:hover{
+                    background: rgb(73,173,65);
+                }
+            }
+            
+            &:last-of-type{
+                background: url("/img/up.png");
+                &:hover{
+                    background: rgb(73,173,65);
+                }
+            }
+        }
+        #qrcode{
+            background: url("/img/qrcode.png");
+            &:hover{
+                background: rgb(73,173,65);
+            }
+        }
+        .qr:hover #qrcodeshow{
+            display: block;
+        }
+    }
+
+    footer{
+        font-size: 12px;
+        color: rgb(114,114,114);
+        background: #333;
+        padding-top: 20px;
+        ul{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            li{
+                padding: 5px 0;
+                display: inline-block;
+                &:nth-of-type(n):not(:first-of-type)::before{
+                    content:'|';
+                    padding: 5px;
+                }
+            }
+        }
+        div{
+            padding: 10px 0;
+            text-align: center; 
+        }
+        img{
+            display: block;
+            padding: 0 0 10px;
+            margin: 0 auto;        
+        }
+
+    }
+}
+
