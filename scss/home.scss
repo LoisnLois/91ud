@@ -78,7 +78,7 @@ body{
         margin: 0 auto;
         width: 76%;
         padding-top: 137px;
-
+        padding-bottom: 35px;
         .broadcast{
             z-index:8px;
             position: absolute;
@@ -240,7 +240,6 @@ body{
             margin-top: 0;
         }
         .good{
-            padding: 0 0 12px 0;
             & > div{
                 background: white;
                 padding-bottom: 0;
@@ -441,6 +440,16 @@ body{
                 &:nth-of-type(n):not(:first-of-type)::before{
                     content:'|';
                     padding: 5px;
+                }
+                a{
+                    text-decoration: none;
+                    &:link{color: rgb(114,114,114);}
+                    &:visited{color: rgb(114,114,114);}
+                    &:hover{
+                        color: rgb(114,114,114);
+                        text-decoration: underline;
+                    }
+                    &:active{color: rgb(114,114,114);}
                 }
             }
         }

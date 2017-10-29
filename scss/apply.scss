@@ -1,0 +1,99 @@
+body{
+    #content{
+        #applycontent{
+            background: white;
+            span{
+                display: block;
+                padding: 15px 30px;
+                font-size: 18px;
+                border-bottom: 1px solid #eee;
+            }
+            div{
+                &:first-of-type{
+                    padding: 30px 100px;
+                }
+                #applyform{
+                    span{
+                        border: 0;
+                        font-size: 15px;
+                        padding-left: 0;
+
+                    }
+                    input,select,textarea{
+                        display: block;
+                        padding:10px;
+                        border: 1px solid #eee;
+                    }
+                    input{
+                        width: 60%;
+                        outline: none;
+                        &:focus{
+                            border-color: #000;
+                        }
+                    }
+                    select{
+                        width: 120px;
+                        height: 35px;
+                        background: white;
+                        outline: none;
+                    }
+                    textarea{
+                        outline:none; 
+                        &:focus{
+                            border-color: #000;
+                        }
+                        min-height: 35px;
+                    }
+                    .iconNqrcode{
+                        padding: 0;
+                        div{
+                            padding: 0 140px 0 0;
+                            display: inline-block;
+                            img{
+                                display: block;
+                                width: 36px;
+                                height: 36px;
+                                line-height: 36px;
+                                padding: 40px;
+                                border: 2px dashed #eaeaea; 
+                            }
+                            span{
+                                display: block;
+                                text-align: center;
+                                padding: 10px 0;
+                                font-size: 13px;
+                            }
+                        }
+                        
+                    }
+                    img{
+                        display: block;
+                        width: 36px;
+                        height: 36px;
+                        line-height: 36px;
+                        padding: 105px 55px;
+                        border: 2px dashed #eaeaea; 
+                    }
+                    .submitbtn{
+                        padding-top:30px;
+                        span{
+                            display: inline-block;
+                            padding: 10px 30px;
+                            margin-right: 20px;
+                            &:first-of-type{
+                                color: white;
+                                background: rgb(73,173,65);
+                                border: 1px solid #eee;
+                            }
+                            &:last-of-type{
+                                background: white;
+                                border: 1px solid #eee;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
