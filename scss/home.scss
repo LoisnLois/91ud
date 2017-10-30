@@ -2,6 +2,16 @@ body{
     margin:0;
     padding:0;
     background: rgb(246,246,246);
+    a{
+        text-decoration: none;
+        &:link{color: black;}
+        &:visited{color: black;}
+        &:hover{
+            color: black;
+            text-decoration: underline;
+        }
+        &:active{color: black;}
+    }
     header{
         width: 100%;
         position: fixed;
