@@ -89,6 +89,36 @@ body{
         width: 76%;
         padding-top: 137px;
         padding-bottom: 35px;
+        .hotitem{
+            padding:10px 12px 10px 12px;
+            &:not(:last-child){
+                margin-right: 8px;
+            }
+            
+            border: 1px solid white;
+            &:hover{
+                text-decoration: none;
+                border: 1px solid rgb(220,220,220);
+            }
+            &:hover span{
+                color: white;
+                background: rgb(73,173,65);
+            }
+            width: 90px;
+            overflow: hidden;
+            display: inline-block;
+            span{
+                text-align: center;
+                width: 80px;
+                padding: 5px;
+                margin: 5px 0 0 0;
+                text-overflow:ellipsis;
+                overflow:hidden; 
+                white-space:nowrap; 
+                display: inline-block;
+                font-size: 14px;
+            }
+        }
         .broadcast{
             z-index:8px;
             position: absolute;
@@ -193,7 +223,7 @@ body{
 
         .hot{
             margin-top: 261px;
-            span{
+            &>span{
                 &:first-of-type{
                     display: block;
                     padding: 20px 0;
@@ -206,35 +236,7 @@ body{
                     background: white;
                 }
                 
-                .hotitem{
-                    padding:10px 12px 10px 12px;
-                    &:not(:last-child){
-                        margin-right: 8px;
-                    }
-                    
-                    border: 1px solid white;
-                    &:hover{
-                        border: 1px solid rgb(220,220,220);
-                    }
-                    &:hover span{
-                        color: white;
-                        background: rgb(73,173,65);
-                    }
-                    width: 90px;
-                    overflow: hidden;
-                    display: inline-block;
-                    span{
-                        text-align: center;
-                        width: 80px;
-                        padding: 5px;
-                        margin: 5px 0 0 0;
-                        text-overflow:ellipsis;
-                        overflow:hidden; 
-                        white-space:nowrap; 
-                        display: inline-block;
-                        font-size: 14px;
-                    }
-                }
+
             }
             .lastdiv{
                 padding: 0;
