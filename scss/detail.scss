@@ -21,6 +21,7 @@ body{
                     float: left;
                     width: 72%;
                     &>div{
+                        padding: 0 0 0 20px;
                         &:first-of-type{
                             overflow: hidden;
                             &>div:first-child{
@@ -125,6 +126,153 @@ body{
                             &>span{
                                 padding-bottom: 20px;
                             }
+                        }
+                        &:nth-of-type(5){
+                            padding: 20px 0 20px 20px;
+                            &>span{
+                                display: inline-block;
+                                width: 42px;
+                                height: 42px;
+                                line-height: 42px;
+                                font-size: 14px;
+                                color: rgb(73,173,65);
+                                border-radius: 50%;
+                                text-align: center;
+                                border:1px solid rgb(73,173,65);
+                                margin-left: 8px;
+                                margin-bottom: -3px;
+                            }
+                            &>div{
+                                width: 100%;
+                                padding: 0;
+                                margin: 0;
+                                overflow: hidden;
+                                &:nth-of-type(1){
+                                    i:nth-of-type(1){
+                                        float: left;
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 97px;
+                                        background: url("/img/border-l.png");
+                                    }
+                                    &>div{
+                                        float: left;
+                                        width: 95%;
+                                        overflow: hidden;
+                                        &>div{
+                                            &:first-of-type{
+                                                overflow: hidden;
+                                                i{
+                                                    display: inline-block;
+                                                    width: 46px;
+                                                    height: 8px;
+                                                    float: left;
+                                                    background: url("/img/border-t.png");
+                                                }
+                                                span{
+                                                    float: left;
+                                                    display: inline-block;
+                                                    width: 100%;
+                                                    height: 8px;
+                                                    margin: -8px 8px 0 46px;
+                                                    border-top:1px solid rgb(73,173,65);
+
+                                                }
+                                            }
+                                            &:nth-of-type(2){
+                                                border-bottom: 1px solid rgb(73,173,65);
+                                                &>textarea{
+                                                    outline: none;
+                                                    border: 0;
+                                                    width: 97%;
+                                                    height: 68px;
+                                                    resize: none;
+                                                    margin: 13px 10px 0 10px;
+                                                    font-size: 15px;
+                                                    color: #bfbfbf;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    i:nth-of-type(2){
+                                        float: left;
+                                        display: inline-block;
+                                        width: 8px;
+                                        height: 97px;
+                                        background: url("/img/border-r.png");
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    padding: 15px 10px;
+                                    box-sizing: border-box;
+                                    i{
+                                        display: inline-block;
+                                        width: 18px;
+                                        height: 18px; 
+                                    }
+                                    &>div{
+                                        float: left;
+                                        &>i{
+                                            &:first-of-type{
+                                                background: url("/img/facegreen.png");
+                                            }
+                                            &:last-of-type{
+                                                margin-left: 20px;
+                                                background: url("/img/imagegreen.png");
+                                            }
+                                        }
+                                    }
+                                    &>i{
+                                        float: right;
+                                        margin-right: 15px;
+                                        width: 102px;
+                                        height: 30px;
+                                        background: url("/img/post-btn.png");
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(6){
+                            padding: 20px;
+                            &>div{
+                                height: 29px;
+                                &:nth-of-type(1){
+                                    &>span{
+                                        float: left;
+                                        display: inline-block;
+                                        width: 66px;
+                                        height: 30px;
+                                        color:rgb(73,173,65);
+                                        font-size: 16px;
+                                        line-height: 30px;
+                                        text-align:center;
+                                        background: url("/img/cmtlist-bg-active.png");
+                                    }
+                                    &>div{
+                                        float: left;
+                                        width: 90%;
+                                        height: 30px;
+                                        border-bottom: 1px solid rgb(73,173,65);
+                                        &>div:nth-of-type(1){
+                                            float: right;
+                                            &>span{
+                                                
+                                                color: rgb(73,173,65);
+                                                &:nth-of-type(2n-1){
+                                                    font-weight: bold;
+                                                    font-size: 20px;
+                                                    font-family: Impact;
+                                                }
+                                                &:nth-of-type(2n){
+                                                    font-size: 14px;
+                                                    font-family: "Microsoft YaHei";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
                         }
                     }
                 }
